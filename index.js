@@ -22,7 +22,7 @@ function addNumbers(num1, num2) {
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
-
+    
 /**
  * ### Challenge `sayGoodbye`
  * 
@@ -35,8 +35,8 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(/* code here */) {
-  /* code here */
+function sayGoodbye(name) {
+  return `Goodbye. ${name}. Have a great day.`
 }
 
 /**
@@ -53,8 +53,8 @@ function sayGoodbye(/* code here */) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(/* code here */) {
-  /* code here */
+function temperatureCtoF(convertTemp) {
+  return  Math.round(convertTemp*9/5 + 32)
 }
 
 /**
@@ -79,6 +79,7 @@ function temperatureInF(/* code here */) {
 }
 
 
+
 /**
  * ### Challenge `makePersonObject`
  * 
@@ -95,9 +96,15 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  return personObject = {
+         id: id,
+         name: name,
+         email: email,
+   }
 }
+//console.log(makePersonObject(5, 'Leia', 'leia@leia.com'))
+
 
 /**
  * ### Challenge `getName`
@@ -112,10 +119,11 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(personObject) {
+  return `Hello, my name is ${personObject.name}`
 }
-
+const newPerson = makePersonObject(1, 'Leia', 'leia@leia.com')
+//console.log(getName(newPerson))
 
 /**
  * ### Challenge `appleIndex`
@@ -132,9 +140,14 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(arr) {
+  return arr[0]
 }
+
+const arr1 = ['apple', 'orange', 'banana', 'peach'];
+
+console.log(appleIndex(arr1))
+
 
 /**
  * ### Challenge `isItAnApple`
