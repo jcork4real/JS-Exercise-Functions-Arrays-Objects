@@ -36,7 +36,7 @@ function addNumbers(num1, num2) {
  * 
 */
 function sayGoodbye(name) {
-  return `Goodbye. ${name}. Have a great day.`
+  return `Goodbye, ${name}. Have a great day.`
 }
 
 /**
@@ -74,8 +74,19 @@ function temperatureCtoF(convertTemp) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
+function temperatureInF(convertTemp, isF) {
   /* code here */
+
+  if (isF != 'F'){
+    var F =  Math.round(convertTemp*9/5 + 32)
+
+    return F + 'F'
+
+  }else{
+    //  var C = Math.round((convertTemp-32)/1.8)
+
+     return convertTemp + isF
+  }
 }
 
 
@@ -96,14 +107,21 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(id, name, email) {
-  return personObject = {
-         id: id,
-         name: name,
-         email: email,
+
+  function makePersonObject(id, name, email){
+    
+  var personObject = {
+
+    id: id,
+    name: name,
+    email: email,
    }
-}
-//console.log(makePersonObject(5, 'Leia', 'leia@leia.com'))
+
+   return personObject
+
+  }
+
+// console.log(makePersonObject(5, 'Leia', 'leia@leia.com'))
 
 
 /**
@@ -123,7 +141,7 @@ function getName(personObject) {
   return `Hello, my name is ${personObject.name}`
 }
 const newPerson = makePersonObject(1, 'Leia', 'leia@leia.com')
-//console.log(getName(newPerson))
+// console.log(getName(newPerson))
 
 /**
  * ### Challenge `appleIndex`
