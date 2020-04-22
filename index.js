@@ -109,7 +109,7 @@ function temperatureInF(convertTemp, isF) {
 */
 
   function makePersonObject(id, name, email){
-    
+
   var personObject = {
 
     id: id,
@@ -158,13 +158,19 @@ const newPerson = makePersonObject(1, 'Leia', 'leia@leia.com')
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(arr) {
-  return arr[0]
+
+// const arr1 = ['apple', 'orange', 'banana', 'peach'];
+
+function appleIndex(arr1) {
+
+  for ( let i = 0 ; i <= arr1.length; i++ ){
+    if (arr1[i] === 'apple'){
+      return i
+    }
+  }
+  
 }
-
-const arr1 = ['apple', 'orange', 'banana', 'peach'];
-
-console.log(appleIndex(arr1))
+console.log(appleIndex([ 'orange', 'grape', 'apple', 'banana', 'mango' ]))
 
 
 /**
@@ -182,9 +188,31 @@ console.log(appleIndex(arr1))
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+
+
+function isItAnApple(arr) {
+
+let i = 0;
+
+while (i < arr.length) {
+  
+  if( arr[i] !== 'apple'){
+
+     arr.splice(i, 1, false)
+
+    }else{
+
+      arr.splice(i, 1, true )
+    }
+        i++;
 }
+
+  return arr
+
+}
+
+console.log(isItAnApple([ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ]))
+
 
 
 
